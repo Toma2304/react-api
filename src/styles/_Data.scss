@@ -1,0 +1,205 @@
+.data {
+  padding: 40px 0;
+  color: $secondary-text;
+  .first {
+    padding-left: 15px;
+    padding-right: 15px;
+    .set {
+      .link-part {
+        .title {
+          font-size: 18px;
+        }
+
+        .text {
+          font-size: 12px;
+
+          span {
+            color: #bfbfbf;
+          }
+        }
+      }
+      .countries {
+        .continent-box {
+          margin-top: 18px;
+
+          .continent {
+            font-size: 14px;
+          }
+
+          .line {
+            width: 90%;
+            margin-top: 2px;
+            margin-bottom: 12px;
+            border-bottom: 0.5px solid $border;
+          }
+
+          .list {
+            .country {
+              font-size: 12px;
+              margin-bottom: 4px;
+
+              color: $active;
+
+              transition: $animation;
+
+              &:hover,
+              &:focus {
+                color: $accent-text;
+              }
+            }
+          }
+        }
+      }
+    }
+    .facts {
+      margin-top: 20px;
+      text-align: center;
+
+      input {
+        width: 50%;
+        border-radius: 5px;
+        border: 1px solid $border;
+        padding: 8px 20px;
+        margin-bottom: 20px;
+
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        color: $border;
+        background-color: $light-bg;
+
+        transition: $animation;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .list {
+        text-align: left;
+        max-width: 400px;
+        margin: 0 auto;
+
+        .set {
+          text-align: left;
+          margin-top: 18px;
+          margin-bottom: 12px;
+          font-size: 12px;
+
+          border-bottom: 0.5px solid $border;
+
+          span {
+            font-weight: 700;
+          }
+        }
+
+        .item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 4px;
+          padding: 4px;
+
+          &:nth-child(2n) {
+            background-color: $light-bg;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .data {
+    padding: 50px 0;
+    .first {
+      padding-right: 20px;
+      padding-left: 20px;
+      .set {
+        .countries {
+          .continent-box {
+            .line {
+              width: 600px;
+            }
+
+            .list {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              width: 600px;
+
+              a {
+                flex: 0 0 33.333333%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .data {
+    padding-right: 50px;
+    .first {
+      padding-right: 30;
+      padding-left: 30;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      .set {
+        .link-part {
+          .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+          }
+
+          .text {
+            font-size: px;
+          }
+        }
+
+        .countries {
+          .continent-box {
+            .continent {
+              font-size: 16px;
+              margin-bottom: 8px;
+            }
+
+            .line {
+              margin-bottom: 20px;
+            }
+
+            .list {
+              .country {
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+      .facts {
+        margin-top: 0;
+        input {
+          width: 260px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .data {
+    padding: 0;
+    display: flex;
+
+    .first {
+      padding: 40px 40px;
+      width: 70vw;
+    }
+    .second {
+      width: 30vw;
+      background-color: $light-bg;
+    }
+  }
+}
